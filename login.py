@@ -1,0 +1,6 @@
+Username = input("Create a Username:\n")
+Password = input("Create a Password:\n")
+print("Starting Main Boot...")
+print("Ⓦ ⓔ ⓛ ⓒ ⓞ ⓜ ⓔ   ⓣ ⓞ   Ⓟ ⓨ ⓣ ⓗ ⓞ ⓝ   Ⓞ Ⓢ !")
+print("Welcome,", Username,"to Python OS!")
+exec(open("commandline.py").read())
