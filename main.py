@@ -1,3 +1,5 @@
+import sentry_sdk
+sentry_sdk.init("https://e935fd3f98b54c52be5f96f6b5bc890b@o394689.ingest.sentry.io/5245135")
 print("Welcome to Python Operating System!")
 print("Importing Services...")
 import time
