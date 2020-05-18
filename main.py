@@ -6,17 +6,17 @@ print("Loading...")
 Date = datetime.date
 Time = datetime.time
 sleepTime = time.sleep
-currentVersion = "0.0.1"
+currentDT = datetime.datetime.now()
+currentVersion = "0.0.2"
 currentVersionType = "Alpha"
 print("Imported Variables...")
-currentDT = datetime.datetime.now()
 print("The current time is:")
-print (str(currentDT))
-timeCorrect = input("Correct? y/n\n")
+print(str(currentDT))
+timeCorrect = input("Correct? (y/n)\n")
 if timeCorrect == "y":
-  print("Time and Date: [OK]")
+  print("Time and Date: [PASS]")
   print("Waiting for Internet Connection...")
-  if currentVersion == "0.0.1":
+  if currentVersion == "0.0.1" or currentVersion == "0.0.2":
     print("No Internet Connection Needed...") #Alpha  Version Does not Have Internet Connection
     print("Internet Connection: [FAIL]")
     print("Continuing With Boot...") 
@@ -26,4 +26,14 @@ if timeCorrect == "y":
       print("Username and Password Save Not Available")
       print("Starting Login Service...")
       exec(open("login.py").read())
-      
+    elif currentVersionType == "Beta":
+      print("This operating system is in Beta.")
+      print("Username and Password Save Not Available")
+      print("Starting Login Service...")
+      exec(open("login.py").read())
+    else:
+      print("A critical error has ocurred! Code: ERRINVOSVERTYPE")
+  else:
+    print("A critical error has ocurred! Code: ERRINVOSVER")
+else:
+  exec(open("main.py").read())
